@@ -1,0 +1,41 @@
+import javax.swing.*;
+public class teste
+{
+    public static void main(String[]args)
+    {
+        int n1, n2, p = 1;
+        String msg = "", msgent = "Digite 1 para produto e 2 para produtória";
+        char op = 0;
+        n1 = Integer.ParseInt(JOptionPane.showInputDialog("Digite um número inteiro"));
+        n2 = Integer.ParseInt(JOptionPane.showInputDialog("Digite o segundo número inteiro"));
+        op = (JOptionPane.showInputDialog(msgent)).charAt(0);
+           
+        switch(op)  
+        {
+            case '1':
+            {
+                if (n1 && n2 > 0)
+                {
+                p = n1 * n2;
+                msg = "O produto de" + n1 + "por" + n2 + "é igual a: " + p1;
+                }
+                break;
+            }    
+            case '2':
+            {
+                p = n1;
+                for(int i=1;i<=n2;i=i+1)
+                {
+                    p = p * n1;
+                    msg = "O produtório de" + n1 + "para" + n2 + " é igual a: " + p2;
+                }
+                break
+            }
+            default: JOptionPane.showMessageDialog(null, "Opção inválida, operações não realizadas")
+        }     
+     if(op>=1 && op<3)
+        {  
+            JOptionPane.showMessageDialog(null, msg)
+        }
+    }   
+}
